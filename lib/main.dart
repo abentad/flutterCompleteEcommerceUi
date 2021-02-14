@@ -1,4 +1,5 @@
-import 'package:eCommerceApp/screens/onBoarding_screen.dart';
+import 'package:eCommerceApp/screens/onBoardingScreen/onBoarding_screen.dart';
+import 'package:eCommerceApp/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'ECommerceApp',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
       home: OnBoardingScreen(),
     );
   }

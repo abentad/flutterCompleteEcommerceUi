@@ -1,6 +1,8 @@
 import 'package:eCommerceApp/models/onboarding_screen_data.dart';
+import 'package:eCommerceApp/screens/signInScreen/signIn_screen.dart';
 import 'package:eCommerceApp/widgets/default_button.dart';
-import 'package:eCommerceApp/widgets/onboarding_screen_widget.dart';
+import 'package:eCommerceApp/screens/onBoardingScreen/components/onboarding_screen_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -49,7 +51,16 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ),
                     ),
                     Spacer(flex: 2),
-                    defaultButton(text: "Continue", press: () {}),
+                    defaultButton(
+                      text: "Continue",
+                      press: () {
+                        Navigator.of(context).pushReplacement(
+                          CupertinoPageRoute(
+                            builder: (context) => SignInScreen(),
+                          ),
+                        );
+                      },
+                    ),
                     Spacer(),
                   ],
                 ),
